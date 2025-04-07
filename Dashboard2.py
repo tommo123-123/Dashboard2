@@ -6,6 +6,22 @@ from alpha_vantage.timeseries import TimeSeries
 from alpha_vantage.fundamentaldata import FundamentalData
 import datetime
 import time
+import sys
+print(f"Python version: {sys.version}")
+print("Attempting to import plotly...")
+try:
+    import plotly
+    print(f"Plotly version: {plotly.__version__}")
+    import plotly.graph_objects as go
+    import plotly.express as px
+    print("Plotly imports successful")
+except Exception as e:
+    print(f"Error importing plotly: {str(e)}")
+    
+# Continue with rest of imports
+import streamlit as st
+import pandas as pd
+# etc.
 
 # Page config
 st.set_page_config(page_title="Financial Markets Dashboard", layout="wide")
